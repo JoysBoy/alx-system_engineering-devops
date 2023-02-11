@@ -1,2 +1,2 @@
 #!/bin/bash
-l:mime Holberton
+mv [[ $file == [A-Z]* ]] /tmp/u/
