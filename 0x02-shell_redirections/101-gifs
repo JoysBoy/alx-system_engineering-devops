@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -print0 | xargs -0 stat --format "%s %n" | sort -k1,1n -k2,2 | awk '{print substr($2, 1, length($2) - 4)}
+find . -name "*.gif" -type f -print0 | xargs -0 -I {} basename {} .gif | sort -f | xargs -I {} echo {}
